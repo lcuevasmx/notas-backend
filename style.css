@@ -3,11 +3,14 @@
 body {
     background-color: #8aceea;
     font-family: 'Lato', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
     color: #415dab;
+    transition: color 0.2s ease;
 }
 
 a:hover, a:visited:hover {
@@ -42,42 +45,67 @@ hr {
     
     display: flex;
     align-items: flex-start;       
+    box-sizing: border-box;
 }
 
 #sidebar {
     width: 275px;
-    height: 100vh;
+    /* Eliminado height: 100vh para evitar scroll doble o espacios vacíos */
     flex-shrink: 0;
     padding: 20px;
     background-color: #b1e1f1;
-
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 #sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+/* Mejora el área táctil de los enlaces en el menú */
+#sidebar li {
+    margin-bottom: 8px;
+}
+
+#sidebar a {
+    display: block;
+    padding: 6px 8px;
+    border-radius: 4px;
 }
 
 #contenido {
     flex-grow: 1;
-    padding: 20px;
+    padding: 25px;
     background-color: #f9f9f9;
-    min-width: 0; /* Para evitar que el contenido se desborde */
+    min-width: 0; /* Evita desbordamiento de código */
+    box-sizing: border-box;
 }
 
+/* Ajustes especiales para Celulares */
 @media (max-width: 768px) {
     .contenedor {
         flex-direction: column;
+        padding: 0;
     }
 
     #sidebar {
         width: 100%;
-        height: auto;
-        border-right: none;
+        height: auto; /* Se ajusta solo al contenido del menú */
+        border-bottom: 3px solid #415dab;
+        padding: 15px 20px;
     }
 
     #contenido {
         width: 100%;
+        padding: 20px 15px; /* Más espacio en los bordes del celular */
+    }
+
+    /* Opcional: imágenes y tablas adaptables */
+    #contenido img, 
+    #contenido table {
+        max-width: 100%;
+        height: auto;
     }
 }
