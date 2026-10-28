@@ -1,4 +1,3 @@
-// 1. Cargar el sidebar e iniciar la navegación
 async function cargarSidebar() {
     try {
         const res = await fetch('sidebar.md');
@@ -19,7 +18,7 @@ async function cargarSidebar() {
     }
 }
 
-// 2. Interceptar los clics del menú
+// Interceptar los clics del menú
 function escucharEnlaces() {
     const enlaces = document.querySelectorAll('#sidebar a');
     
@@ -39,7 +38,7 @@ function escucharEnlaces() {
     });
 }
 
-// 3. Leer la URL al dar F5 o entrar mediante un enlace compartido
+// Leer la URL al dar F5 o entrar mediante un enlace compartido
 function comprobarHashURL() {
     const hash = window.location.hash.replace('#', '');
     
@@ -56,12 +55,8 @@ function comprobarHashURL() {
             cargarNota('./contenido/home.md');
         }
     }
-    
-    // Si no hay hash en la URL, carga una nota por defecto o bienvenida
-    // cargarNota('./contenido/m1_herramientas-microsoft-backend.md');
 }
 
-// 4. Cargar el contenido Markdown en la sección principal
 async function cargarNota(ruta) {
     try {
         const res = await fetch(ruta);
