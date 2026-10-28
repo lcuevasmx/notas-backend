@@ -101,11 +101,43 @@ hr {
 #contenido pre {
     display: block;
     background-color: #1e1e1e; /* Fondo oscuro estilo terminal */
-    color: #4ea6c9;            /* Texto estilo consola */
+    color: white;            /* Texto estilo consola */
     font-family: 'Consolas', 'Courier New', monospace;
     padding: 12px;
     border-radius: 6px;
     overflow-x: auto;
+}
+
+
+/* Layout en paralelo para Diagrama y Pseudocódigo */
+.comparativa-codigo {
+    display: flex;
+    gap: 20px;            /* Espacio entre las dos columnas */
+    align-items: stretch; /* Mantiene la misma altura si es necesario */
+    margin: 20px 0;
+}
+
+/* Distribución equitativa de las dos columnas */
+.comparativa-codigo > div,
+.comparativa-codigo > pre {
+    flex: 1;
+    min-width: 0; /* Previene que los bloques de código se desborden */
+}
+
+/* Ajustes específicos para el contenedor del diagrama */
+.comparativa-codigo .language-mermaid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 0;
+}
+
+footer {
+    padding: 8px;
+    text-align: center;
+    background-color: #415dab;
+    color: white;
 }
 
 /* Ajustes especiales para Celulares */
@@ -133,5 +165,9 @@ hr {
     #contenido table {
         max-width: 100%;
         height: auto;
+    }
+
+    .comparativa-codigo {
+        flex-direction: column;
     }
 }

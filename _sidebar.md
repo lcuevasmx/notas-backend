@@ -1,13 +1,12 @@
-### Módulo 1
+# Módulo 1
 * [Herramientas de Microsoft](./contenido/m1_herramientas-microsoft.md)
 * [Desarrollo backend](./contenido/m1_desarrollo-backend.md)
 * [Trabajo backend](./contenido/m1_trabajo-backend.md)
 
-### Módulo 2
-* [2.1 Estructuras Condicionales](./contenido/condicionales.md)
+# Módulo 2
+* [Razonamiento deductivo](./contenido/m2_razonamiento-deductivo.md)
+## Prácticas 
+  * [Número par o impar](./contenido/m2_practicas/m2p_numeroparimpar.md)
 
-### Módulo 3
-* [3.1 Introducción a SQL](./contenido/sql-basico.md)
-
-### Extra
+# Extra
 * [Guía de marcado](./contenido/marcado.md)

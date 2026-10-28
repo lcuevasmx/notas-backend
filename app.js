@@ -64,17 +64,23 @@ function comprobarHashURL() {
 // 4. Cargar el contenido Markdown en la sección principal
 async function cargarNota(ruta) {
     try {
-        // Si la ruta no empieza con './', se la aseguramos
-        const rutaLimpia = ruta.startsWith('./') ? ruta : `./${ruta.replace(/^\//, '')}`;
-
-        const res = await fetch(rutaLimpia);
+        const res = await fetch(ruta);
         if (!res.ok) throw new Error('No se pudo cargar la nota');
         
         const markdown = await res.text();
+        
+        // 1. Inyectar el HTML
         document.getElementById('contenido').innerHTML = marked.parse(markdown);
+        
+        // 2. Renderizar los diagramas de Mermaid
+        if (window.mermaid) {
+            mermaid.run({
+                querySelector: '.language-mermaid'
+            });
+        }
     } catch (error) {
         console.error(error);
-        document.getElementById('contenido').innerHTML = '<p>Error al cargar la nota seleccionada.</p>';
+        document.getElementById('contenido').innerHTML = '<p>Error al cargar la nota.</p>';
     }
 }
 

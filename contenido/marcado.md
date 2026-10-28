@@ -129,7 +129,82 @@ Puedes crear diagramas de flujo escribiendo `mermaid` en el bloque de código:
 
 ```mermaid
 flowchart TD
-    A[Inicio] --> B{¿Usuario válido?}
-    B -- Sí --> C[Acceso Concedido]
-    B -- No --> D[Mostrar Error]
+    %% 1. Óvalo / Terminal: Inicio y Fin
+    A([Inicio]) --> B[/numero_1, numero_2/]
+
+    %% 2. Paralelogramo inclinado a la derecha: Entrada de Datos (Lectura)
+    B --> C[suma = numero_1 + numero_2]
+
+    %% 3. Rectángulo: Proceso / Asignación
+    C --> D{suma > 100}
+
+    %% 4. Rombo: Decisión / Condición lógica
+    D -- Sí --> E[\"Suma alta"\]
+    D -- No --> F[\"Suma normal"\]
+
+    %% 5. Paralelogramo inclinado a la izquierda: Salida de Datos (Impresión)
+    E --> G[(Base de Datos)]
+    F --> G
+
+    %% 6. Cilindro: Almacenamiento / Base de datos
+    G --> H([Fin])
 ```
+---
+
+### Tabla de referencia para tus notas
+
+| Elemento / Concepto | Figura Geométrica | Sintaxis en Mermaid | Ejemplo de Uso |
+| :--- | :--- | :--- | :--- |
+| **Inicio / Fin** | Óvalo (Terminal) | `([Texto])` | `A([Inicio])` |
+| **Entrada (Lectura)** | Paralelogramo der. | `[/Texto/]` | `B[/usuario, clave/]` |
+| **Salida (Impresión)** | Paralelogramo izq. | `[\"Texto"\]` | `E[\"Acceso concedido"\]` |
+| **Proceso / Cálculo** | Rectángulo | `[Texto]` | `C[total = a + b]` |
+| **Decisión** | Rombo | `{Texto}` | `D{edad >= 18}` |
+| **Persistencia / BD** | Cilindro | `[(Texto)]` | `G[(SQL Server)]` |
+
+---
+
+### Ejemplo avanzado: Maquetación en paralelo con Pseudocódigo
+
+Si quieres guardar esta referencia en tus notas usando el diseño responsivo de dos columnas (`flex`):
+
+<div class="comparativa-codigo">
+
+```mermaid
+flowchart TD
+    A([Inicio]) --> B[/numero_1, numero_2/]
+    B --> C[suma = numero_1 + numero_2]
+    C --> D{suma > 100}
+    
+    D -- Sí --> E[\"Suma alta"\]
+    D -- No --> F[\"Suma normal"\]
+    
+    E --> G[(BD_Logs)]
+    F --> G --> H([Fin])
+```
+
+```pseudocode
+    Inicio Referencia_Sintaxis
+
+    // Declaración
+    Entero: numero_1, numero_2, suma
+
+    // Entrada
+    Leer(numero_1, numero_2)
+
+    // Proceso
+    suma <- numero_1 + numero_2
+
+    // Decisión
+    Si suma > 100 Entonces
+        Escribir("Suma alta")
+    Sino
+        Escribir("Suma normal")
+    FinSi
+
+    // Guardado
+    GuardarEnBD(suma)
+
+    Fin Referencia_Sintaxis
+```
+</div>
