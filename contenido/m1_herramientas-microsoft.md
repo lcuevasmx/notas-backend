@@ -1,10 +1,10 @@
-# Herramientas de Microsoft para el Desarrollo Backend
+# Herramientas de Microsoft
 
 Resumen de las tecnologías, plataformas y herramientas de Inteligencia Artificial utilizadas para la construcción y gestión de servicios backend.
 
 ---
 
-## 1. Lenguaje y Ecosistema: C#
+## Lenguaje C#
 
 C# es el lenguaje principal para construir la lógica del servidor, API REST y servicios robustos.
 
@@ -16,7 +16,7 @@ C# es el lenguaje principal para construir la lógica del servidor, API REST y s
 
 ---
 
-## 2. Control de Versiones: GitHub
+## Control de Versiones: GitHub
 
 Plataforma de hospedaje de código basada en **Git** para el control de versiones, seguimiento de cambios y trabajo colaborativo.
 
@@ -27,7 +27,7 @@ Plataforma de hospedaje de código basada en **Git** para el control de versione
 
 ---
 
-## 3. Asistentes de Inteligencia Artificial (Copilot)
+## Asistentes de Inteligencia Artificial (Copilot)
 
 Integración de herramientas de IA para automatizar tareas repetitivas, acelerar la escritura de código y mejorar la documentación.
 
@@ -41,7 +41,7 @@ Integración de herramientas de IA para automatizar tareas repetitivas, acelerar
 
 ---
 
-## 4. Editor de Código: Visual Studio Code (VS Code)
+## Editor de Código: Visual Studio Code (VS Code)
 
 Editor ligero y extensible diseñado para el desarrollo ágil de aplicaciones web y backend.
 

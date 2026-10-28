@@ -50,7 +50,7 @@ Usa una comilla invertida simple al inicio y al final para resaltar variables o 
 Aplica el comando `git status` o la variable `usuarioNombre`.
 
 ### Bloques de código con resaltado
-Usa tres comillas invertidas indicando el lenguaje al inicio para activar el coloreado de sintaxis:
+Usa tres \`\`\` comillas invertidas indicando el lenguaje al inicio para activar el coloreado de sintaxis:
 
 ```csharp
 // Ejemplo de código C#
