@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neucha&display=swap');
+
+body {
+    background-color: #8aceea;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #415dab;
+}
+
+a:hover, a:visited:hover {
+    color: #27ac3f;
+}
+
+a:visited {
+    color: #8841ab;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #8841aba5;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.encabezado {
+    background-color: #415dab;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    
+    display: flex;
+    align-items: flex-start;       
+}
+
+#sidebar {
+    width: 275px;
+    height: 100vh;
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: #b1e1f1;
+
+    font-size: 14px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contenido {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-width: 0; /* Para evitar que el contenido se desborde */
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+    }
+
+    #contenido {
+        width: 100%;
+    }
+}

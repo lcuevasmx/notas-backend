@@ -4,34 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Notas de Backend</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bitácora de Desarrollo Backend</h1>
+    <header class="encabezado">
+        <h1>Bitácora de Aprendizaje Backend</h1>
     </header>
 
-    <nav id="sidebar">
-        <h2>Índice de contenidos</h2>
-        <ul>
-            <li><strong>Módulo 1: Introducción al desarrollo backend</strong></li>
-                <li><a href="#" onclick="cargarNota('herramientas-microsoft')">Herramientas de Microsoft para el desarrollo backend</a></li>
-        </ul>
-    </nav>
-    <div class="container">
+    <div class="contenedor">
         <nav id="sidebar">
-            <!-- Practica tu CSS/JS aquí para la navegación -->
-            <ul>
-                <li><a href="#introduccion">Introducción</a></li>
-                <li><a href="#pseudocodigo">Pseudocódigo y Diagramas</a></li>
-            </ul>
+            <!-- Aquí se carga el menú -->
         </nav>
 
-        <main id="content">
+        <main id="contenido">
             <!-- Aquí se renderizan tus notas de Markdown -->
         </main>
     </div>
 
+    <footer>
+        <p>&copy; 2026 Mis Notas de Backend.</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="app.js"></script>
 </body>
