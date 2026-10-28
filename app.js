@@ -64,7 +64,10 @@ function comprobarHashURL() {
 // 4. Cargar el contenido Markdown en la sección principal
 async function cargarNota(ruta) {
     try {
-        const res = await fetch(ruta);
+        // Si la ruta no empieza con './', se la aseguramos
+        const rutaLimpia = ruta.startsWith('./') ? ruta : `./${ruta.replace(/^\//, '')}`;
+
+        const res = await fetch(rutaLimpia);
         if (!res.ok) throw new Error('No se pudo cargar la nota');
         
         const markdown = await res.text();
