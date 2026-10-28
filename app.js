@@ -1,8 +1,8 @@
 // 1. Cargar el sidebar e iniciar la navegación
 async function cargarSidebar() {
     try {
-        const res = await fetch('_sidebar.md');
-        if (!res.ok) throw new Error('No se pudo encontrar _sidebar.md');
+        const res = await fetch('sidebar.md');
+        if (!res.ok) throw new Error('No se pudo encontrar sidebar.md');
         
         const markdown = await res.text();
         const sidebarEl = document.getElementById('sidebar');
