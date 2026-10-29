@@ -14,6 +14,8 @@
 #### Pseudocódigo
 - [Año bisiesto](./contenido/m2_practicas/m2p_añobisiesto.md)
 - [Sistema simple calificación](./contenido/m2_practicas/m2p_sistemasimplecalificacion.md)
+- [Números enteros](./contenido/m2_practicas/m2p_numerosenteros.md)
+- [Descuento para mayores](./contenido/m2_practicas/m2p_descuentomayores.md)
 
 # Extra
 - [Guía de marcado](./contenido/marcado.md)
