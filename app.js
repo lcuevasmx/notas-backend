@@ -83,6 +83,15 @@ async function cargarNota(ruta) {
     }
 }
 
+const btnSubir = document.getElementById('btn-subir');
+
+btnSubir.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
 // Escuchar si el usuario presiona los botones Atrás/Adelante del navegador
 window.addEventListener('hashchange', comprobarHashURL); 
 

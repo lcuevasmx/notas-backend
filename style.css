@@ -134,6 +134,56 @@ hr {
     padding: 0;
 }
 
+/* Botón flotante */
+/* Botón flotante para subir */
+.btn-subir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: #0066cc;
+  color: #ffffff;
+  border-radius: 50%; /* Lo hace circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Asegura que permanezca por encima de las notas y contenido */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Efectos de interacción */
+.btn-subir {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  background-color: #8841ab;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem; /* Tamaño del icono */
+  z-index: 1000;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: none;
+}
+
+.btn-subir:hover {
+  background-color: #6a3080;
+  transform: translateY(-3px); /* Pequeño salto al pasar el cursor */
+  cursor: pointer;
+}
+
+.btn-subir:active {
+  transform: translateY(0);
+}
+
 footer {
     padding: 8px;
     text-align: center;
