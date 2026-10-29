@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neucha&display=swap');
 
 body {
-    background-color: #8aceea;
+    background-color: #415dab;
     font-family: 'Lato', Arial, sans-serif;
     font-size: 14px;
     margin: 0;
@@ -48,6 +48,7 @@ hr {
     display: flex;
     align-items: flex-start;       
     box-sizing: border-box;
+    gap: 20px; /* Espacio entre el sidebar y el contenido */
 }
 
 #sidebar {

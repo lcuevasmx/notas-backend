@@ -14,19 +14,36 @@ Crear un sistema de login donde los usuarios puedan introducir su nombre de usua
 
 ```mermaid
 flowchart TD
-    A([Inicio]) --> B[/credenciales/]
-    B --> C[residuo = numero % 2]
-    C --> D{residuo == 0}
+    A([Inicio]) --> B[/Introducir Usuario y Contraseña/]
+    B --> C{¿Credenciales válidas?}
     
-    D -- Sí --> E[\"Número par"\]
-    D -- No --> F[\"Número impar"\]
+    C -- Sí --> E[\"Acceso concedido"\]
+    C -- No --> F[\"Acceso denegado"\]
     
+    F --> B
     E --> G([Fin])
-    F --> G
 ```
 
 ```pseudocode
 Inicio Inicio_Sesion
+    // Declaración de variables
+    Cadena: Usuario, Contraseña
+    Booleano: esValido
+
+    Hacer
+        // Entrada de datos
+        Leer(Usuario)
+        Leer(Contraseña)
+
+        // Validar datos
+        Si Usuario == "correcto" Y Contraseña == "correcta" Entonces
+            Escribir("Acceso concedido")
+            esValido <- Verdadero
+        Sino
+            Escribir("Acceso denegado")
+            esValido <- Falso
+        FinSi
+    Mientras esValido == Falso
 Fin Inicio_Sesion
 ```
 </div>

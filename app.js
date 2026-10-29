@@ -34,6 +34,10 @@ function escucharEnlaces() {
 
             // Cargar la nota en pantalla
             cargarNota(rutaNota);
+            const contenidoEl = document.getElementById('contenido');
+            if(contenidoEl) {
+                contenidoEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
 }
