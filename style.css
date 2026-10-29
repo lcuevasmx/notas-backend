@@ -132,6 +132,11 @@ hr {
     align-items: center;
     border-radius: 6px;
     padding: 0;
+
+    /* Ajustes para evitar scroll horizontal y forzar salto de línea */
+    white-space: pre-wrap !important;     
+    word-break: break-word !important;
+    overflow-x: hidden !important;       /* Opcional: deshabilita el scroll horizontal */
 }
 
 /* Botón flotante */
