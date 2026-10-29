@@ -29,17 +29,27 @@ Usa el símbolo `#` seguido de un espacio. A menor número de `#`, mayor jerarqu
 ### Listas no ordenadas (Viñetas)
 Usa asteriscos `*`, guiones `-` o signos de más `+`:
 
-* Elemento principal 1
-* Elemento principal 2
-  * Subelemento alineado con sangría de 2 espacios
-  * Otro subelemento
+* Elemento sin espacio **con asterísco**
+* Elemento sin espacio **con asterísco**
+  * Sangría de 2 espacios **con asterísco**
+  * Sangría de 2 espacios **con asterísco**
+
+- Elemento sin espacio **con guión**
+- Elemento sin espacio **con guión**
+  - Sangría de 2 espacios **con guión**
+  - Sangría de 2 espacios **con guión**
+
+* Elemento sin espacio **con asterísco**
+* Elemento sin espacio **con asterísco**
+  - Sangría de 2 espacios **con guión**
+  - Sangría de 2 espacios **con guión**
 
 ### Listas ordenadas (Numeradas)
 Usa números seguidos de un punto:
 
-1. Primer paso
-2. Segundo paso
-3. Tercer paso
+1. Número 1 sin espacio
+2. Número 2 sin espacio
+3. Número 3 sin espacio
 
 ---
 
