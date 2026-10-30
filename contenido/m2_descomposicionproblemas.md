@@ -1,30 +1,29 @@
 # Descomposición del problema
 - [LECTURA](#lectura)
-- [RESUMEN DEL VIDEO](#resumen-del-video)
+- [RESUMEN DEL VÍDEO](#resumen-del-vídeo)
 - [INFORMACIÓN DE LAS DIAPOSITIVAS](#información-de-las-diapositivas)
 
 *** 
 
 # Lectura
-Introducción
+
+## Introducción
 La descomposición de problemas es una estrategia utilizada en el desarrollo de software y otros campos para dividir problemas complejos en partes más pequeñas y manejables. Este método facilita la comprensión, gestión y resolución de retos complejos. Por ejemplo, cuando los desarrolladores se enfrentan a un problema crítico extendido por toda una aplicación, descomponer el problema en componentes específicos, como la autenticación de usuarios o el procesamiento de pagos, permite centrarse más en la solución de problemas y resolverlos de forma más eficaz.
 
-Ventajas de la descomposición de problemas complejos
+## Ventajas de la descomposición de problemas complejos
 La descomposición de problemas ofrece varias ventajas. En primer lugar, simplifica la depuración al aislar partes más pequeñas del problema, lo que facilita la identificación y solución de problemas. En segundo lugar, mejora la implementación al permitir a los desarrolladores construir y probar componentes individuales por separado, reduciendo errores y mejorando la colaboración entre los miembros del equipo. En tercer lugar, mejora el mantenimiento al permitir actualizaciones o cambios en partes específicas sin interrumpir todo el sistema, lo que reduce el tiempo de inactividad y mejora la estabilidad general del sistema.
 
-Técnicas de descomposición de problemas
+## Técnicas de descomposición de problemas
 Dos técnicas principales para descomponer problemas son el enfoque descendente y la modularización.
-
-Enfoque descendente: esta técnica parte de una visión general del problema y lo descompone gradualmente en componentes más detallados. Es similar a la creación de un esquema para un ensayo, empezando con un enunciado general y añadiendo subtemas. En la práctica, puede consistir en fijar un objetivo general (por ejemplo, construir un sitio de comercio electrónico) y luego dividirlo en tareas más pequeñas, como diseñar la página de inicio, desarrollar páginas de productos e implementar el proceso de pago.
-
-Modularización: la modularización divide un problema en unidades o módulos autónomos, cada uno de los cuales realiza una función específica. Este enfoque permite el desarrollo independiente y el perfeccionamiento de cada módulo, simplificando la gestión de problemas complejos. Por ejemplo, separar la lógica de autenticación en sus módulos puede ser beneficioso cuando varias páginas del sitio web requieren la misma funcionalidad.
+- **Enfoque descendente:** esta técnica parte de una visión general del problema y lo descompone gradualmente en componentes más detallados. Es similar a la creación de un esquema para un ensayo, empezando con un enunciado general y añadiendo subtemas. En la práctica, puede consistir en fijar un objetivo general (por ejemplo, construir un sitio de comercio electrónico) y luego dividirlo en tareas más pequeñas, como diseñar la página de inicio, desarrollar páginas de productos e implementar el proceso de pago.
+- **Modularización:** la modularización divide un problema en unidades o módulos autónomos, cada uno de los cuales realiza una función específica. Este enfoque permite el desarrollo independiente y el perfeccionamiento de cada módulo, simplificando la gestión de problemas complejos. Por ejemplo, separar la lógica de autenticación en sus módulos puede ser beneficioso cuando varias páginas del sitio web requieren la misma funcionalidad.
 
 Conclusión
 Los problemas complejos son más fáciles de gestionar si se utilizan técnicas de descomposición de problemas como el enfoque descendente y la modularización. Estos métodos proporcionan estructura, reducen los errores, mejoran la colaboración y aumentan la eficacia de la gestión y el mantenimiento de sistemas complejos.
 
 ***
 
-# RESUMEN DEL VIDEO
+# Resumen del vídeo
 La descomposición de problemas en programación consiste en dividir un problema complejo en partes más pequeñas y manejables para facilitar su comprensión, gestión y solución.
 
 ## Conceptos y beneficios de la descomposición

@@ -16,11 +16,11 @@ renderer.heading = function (arg1, arg2) {
         level = arg2 || 2;
     }
 
-    // Convertir el texto a un id limpio (ej: "Resumen del vídeo!" -> "resumen-del-video")
-    const id = text
-        .toLowerCase()
-        .trim()
-        .replace(/\s+/g, '-');                          // Reemplaza espacios por guiones
+    // Normalizar espacios a guiones y aplicar codificación de URL a los caracteres especiales
+    const textoLimpio = text.trim().toLowerCase().replace(/\s+/g, '-');
+    
+    // encodeURIComponent convierte acentos y caracteres especiales a %XX
+    const id = encodeURIComponent(textoLimpio);
 
     return `<h${level} id="${id}">${text}</h${level}>`;
 };
@@ -71,8 +71,8 @@ document.addEventListener('click', async (e) => {
     if (href.includes('.md')) {
         const nombreNota = href.split('/').pop().replace('.md', '');
 
-        // Actualiza la URL limpia con ?nota=nombreNota (SIN #)
-        const nuevaURL = `?nota=${nombreNota}`;
+        // Actualiza la URL limpia con ?n=nombreNota (SIN #)
+        const nuevaURL = `?n=${nombreNota}`;
         history.pushState({ ruta: href }, '', nuevaURL);
 
         // Carga la nota en #contenido
@@ -117,11 +117,11 @@ function hacerScrollA(id) {
 // 6. Leer la URL al dar F5 o navegar con el historial (Atrás/Adelante)
 async function comprobarEstadoURL() {
     const params = new URLSearchParams(window.location.search);
-    const notaParam = params.get('nota');
+    const notaParam = params.get('n');
     const hashID = window.location.hash.replace('#', '');
 
     if (notaParam) {
-        // Buscar el enlace en el sidebar que coincida con ?nota=
+        // Buscar el enlace en el sidebar que coincida con ?n=
         const enlaceCoincidente = Array.from(document.querySelectorAll('#sidebar a'))
             .find(a => a.getAttribute('href')?.includes(notaParam));
 
