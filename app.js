@@ -158,3 +158,39 @@ if (btnSubir) {
 // Eventos de historial
 window.addEventListener('popstate', comprobarEstadoURL);
 document.addEventListener('DOMContentLoaded', cargarSidebar);
+
+// Interceptar clics globales (Sidebar + Anclas internas)
+document.addEventListener('click', async (e) => {
+    const enlace = e.target.closest('a');
+    if (!enlace) return;
+
+    const href = enlace.getAttribute('href');
+    if (!href || href.startsWith('http')) return; // Enlaces externos web
+
+    e.preventDefault();
+
+    // CASO A: Ancla interna dentro de la misma nota (#lectura, #resumen)
+    if (href.startsWith('#')) {
+        const idTarget = href.replace('#', '');
+        window.location.hash = idTarget;
+        hacerScrollA(idTarget);
+        return;
+    }
+
+    // CASO B: Clic en nota del Sidebar (?nota=nombreNota)
+    if (href.includes('.md')) {
+        const nombreNota = href.split('/').pop().replace('.md', '');
+        const nuevaURL = `?nota=${nombreNota}`;
+
+        history.pushState({ ruta: href }, '', nuevaURL);
+
+        // 1. Cargar el HTML de la nota
+        await cargarNota(href);
+
+        // 2. Hacer scroll suave directamente al inicio del área de contenido
+        const contenidoEl = document.getElementById('contenido');
+        if (contenidoEl) {
+            contenidoEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+});

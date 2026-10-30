@@ -14,11 +14,11 @@ La descomposición de problemas es una estrategia utilizada en el desarrollo de 
 La descomposición de problemas ofrece varias ventajas. En primer lugar, simplifica la depuración al aislar partes más pequeñas del problema, lo que facilita la identificación y solución de problemas. En segundo lugar, mejora la implementación al permitir a los desarrolladores construir y probar componentes individuales por separado, reduciendo errores y mejorando la colaboración entre los miembros del equipo. En tercer lugar, mejora el mantenimiento al permitir actualizaciones o cambios en partes específicas sin interrumpir todo el sistema, lo que reduce el tiempo de inactividad y mejora la estabilidad general del sistema.
 
 ## Técnicas de descomposición de problemas
-Dos técnicas principales para descomponer problemas son el enfoque descendente y la modularización.
+Dos técnicas principales para descomponer problemas son el enfoque descendente y la modularización:
 - **Enfoque descendente:** esta técnica parte de una visión general del problema y lo descompone gradualmente en componentes más detallados. Es similar a la creación de un esquema para un ensayo, empezando con un enunciado general y añadiendo subtemas. En la práctica, puede consistir en fijar un objetivo general (por ejemplo, construir un sitio de comercio electrónico) y luego dividirlo en tareas más pequeñas, como diseñar la página de inicio, desarrollar páginas de productos e implementar el proceso de pago.
-- **Modularización:** la modularización divide un problema en unidades o módulos autónomos, cada uno de los cuales realiza una función específica. Este enfoque permite el desarrollo independiente y el perfeccionamiento de cada módulo, simplificando la gestión de problemas complejos. Por ejemplo, separar la lógica de autenticación en sus módulos puede ser beneficioso cuando varias páginas del sitio web requieren la misma funcionalidad.
+- **Modularización:** la modularización divide un problema en unidades o módulos autónomos, cada uno de los cuales realiza una función específica. Este enfoque permite el desarrollo independiente y el perfeccionamiento de cada módulo, simplificando la gestión de problemas complejos. Por ejemplo, separar la lógica de autenticación en sus propios módulos puede ser beneficioso cuando varias páginas del sitio web requieren la misma funcionalidad.
 
-Conclusión
+## Conclusión
 Los problemas complejos son más fáciles de gestionar si se utilizan técnicas de descomposición de problemas como el enfoque descendente y la modularización. Estos métodos proporcionan estructura, reducen los errores, mejoran la colaboración y aumentan la eficacia de la gestión y el mantenimiento de sistemas complejos.
 
 ***
