@@ -1,5 +1,26 @@
-## Técnicas de descomposición de problemas
+# Técnicas de descomposición de problemas
+- [Resumen del vídeo](#resumen-del-vídeo)
+- [Información de las diapositivas](#información-de-las-diapositivas)
 
+***
+
+# Resumen del vídeo
+
+La descomposición de problemas es una estrategia fundamental en el desarrollo de software que permite abordar problemas complejos dividiéndolos en partes más pequeñas y manejables.
+
+## Enfoques para la descomposición de problemas
+- El enfoque de arriba hacia abajo comienza con una visión general del problema y lo divide en partes más pequeñas, similar a crear un esquema para un ensayo.
+- La modularización fragmenta un problema complejo en partes independientes que realizan funciones específicas, facilitando el desarrollo y la gestión.
+
+## Aplicación del enfoque de arriba hacia abajo
+- Se inicia definiendo el objetivo general y la estructura, luego se desglosan las tareas principales y finalmente se dividen en tareas más detalladas.
+- Es útil para problemas generales y menos complejos, como planificar las secciones y características de un sitio web.
+
+## Aplicación de la modularización
+- Consiste en crear módulos autónomos que cumplen funciones específicas, lo que simplifica la comprensión y el manejo del problema.
+- Por ejemplo, en un sitio web, se puede crear un módulo único para la lógica de autenticación que se usa en varias páginas.
+
+Ambos métodos ayudan a entender mejor el problema y a estructurar la solución de manera eficiente, facilitando la planificación, codificación y resolución de errores.
 
 ***
 

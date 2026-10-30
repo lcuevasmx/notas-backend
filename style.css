@@ -19,10 +19,6 @@ a:hover, a:visited:hover {
     color: #27ac3f;
 }
 
-a:visited {
-    color: #ab6b41;
-}
-
 hr {
     border: 0;
     height: 2px;
@@ -52,7 +48,7 @@ hr {
 }
 
 #sidebar {
-    width: 275px;
+    width: 325px;
     flex-shrink: 0;
     padding: 0 10px;
     background-color: #b1e1f1;

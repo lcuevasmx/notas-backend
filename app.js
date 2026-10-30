@@ -180,7 +180,7 @@ document.addEventListener('click', async (e) => {
     // CASO B: Clic en nota del Sidebar (?nota=nombreNota)
     if (href.includes('.md')) {
         const nombreNota = href.split('/').pop().replace('.md', '');
-        const nuevaURL = `?nota=${nombreNota}`;
+        const nuevaURL = `?n=${nombreNota}`;
 
         history.pushState({ ruta: href }, '', nuevaURL);
 

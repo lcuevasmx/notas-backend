@@ -1,7 +1,7 @@
 # Descomposición del problema
-- [LECTURA](#lectura)
-- [RESUMEN DEL VÍDEO](#resumen-del-vídeo)
-- [INFORMACIÓN DE LAS DIAPOSITIVAS](#información-de-las-diapositivas)
+- [Lectura](#lectura)
+- [Resumen del vídeo](#resumen-del-vídeo)
+- [Información de las diapositivas](#información-de-las-diapositivas)
 
 *** 
 
