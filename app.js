@@ -1,22 +1,31 @@
-// Variable global para evitar recargar la misma nota
-let notaActualRuta = '';
-
-// 1. Renderer personalizado de marked para asegurar que TODOS los h1..h6 tengan id="slug"
+// 1. Renderer personalizado universal para marked (compatible con v4 hasta v13+)
 const renderer = new marked.Renderer();
 
-renderer.heading = function (text, level) {
-    const textoLimpio = typeof text === 'object' ? text.text : text;
-    
-    // Genera un slug idéntico al estándar de GitHub (ej. "Resumen del Video" -> "resumen-del-video")
-    const id = textoLimpio
+renderer.heading = function (arg1, arg2) {
+    let text = '';
+    let level = 2;
+
+    // Manejar compatibilidad entre versiones de marked:
+    if (typeof arg1 === 'object' && arg1 !== null) {
+        // Versiones modernas (v12+): arg1 es un token { text: '...', depth: 2, ... }
+        text = arg1.text || '';
+        level = arg1.depth || 2;
+    } else {
+        // Versiones antiguas: arg1 es texto, arg2 es el nivel (1-6)
+        text = arg1 || '';
+        level = arg2 || 2;
+    }
+
+    // Convertir el texto a un id limpio (ej: "Resumen del vídeo!" -> "resumen-del-video")
+    const id = text
         .toLowerCase()
         .trim()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-');
+        .replace(/\s+/g, '-');                          // Reemplaza espacios por guiones
 
-    return `<h${level} id="${id}">${textoLimpio}</h${level}>`;
+    return `<h${level} id="${id}">${text}</h${level}>`;
 };
 
+// Aplicar el renderer a marked
 marked.use({ renderer });
 
 // 2. Cargar el menú lateral
@@ -72,12 +81,9 @@ document.addEventListener('click', async (e) => {
     }
 });
 
-// 4. Inyectar el HTML traducido en el contenedor #contenido
 async function cargarNota(ruta) {
     const contenidoEl = document.getElementById('contenido');
     if (!contenidoEl) return;
-
-    if (ruta === notaActualRuta) return;
 
     try {
         const res = await fetch(ruta);
@@ -86,7 +92,7 @@ async function cargarNota(ruta) {
         const markdown = await res.text();
         notaActualRuta = ruta;
 
-        // Renderiza el HTML con los <h1..h6 id="...">
+        // Inyección: Aquí marked ejecutará el renderer.heading corregido
         contenidoEl.innerHTML = marked.parse(markdown);
 
         if (window.mermaid) {
