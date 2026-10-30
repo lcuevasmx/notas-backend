@@ -20,7 +20,7 @@ a:hover, a:visited:hover {
 }
 
 a:visited {
-    color: #8841ab;
+    color: #ab6b41;
 }
 
 hr {
@@ -60,20 +60,30 @@ hr {
     box-sizing: border-box;
 }
 
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
+#sidebar h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+/* Nivel 1 (Raíz): Limpia el padding y margin por defecto de la lista principal */
+#sidebar > ul {
+    padding-left: 0;
     margin: 0;
+    list-style: none; /* Opcional: quita las viñetas */
+    font-weight: bold; /* Destaca el nivel raíz */
+    line-height: 1.75; /* Ajusta el espacio entre elementos */
 }
 
-#sidebar li {
-    margin-bottom: 4px;
+/* Aplica el mismo reset a todas las listas del sidebar */
+#sidebar ul {
+    list-style: none; /* Opcional: quita las viñetas de todos los niveles */
+    margin: 0;
+    color: #8841ab;
 }
 
-#sidebar a {
-    display: block;
-    padding: 6px 8px;
-    border-radius: 4px;
+/* Niveles anidados (Nivel 2 en adelante): agrega la sangría progresiva */
+#sidebar ul ul {
+    padding-left: 1rem; /* Ajusta este valor según la sangría que prefieras */
 }
 
 #contenido {
