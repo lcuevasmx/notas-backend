@@ -200,6 +200,14 @@ footer {
     text-align: center;
     background-color: #415dab;
     color: white;
+} 
+
+blockquote {
+    margin: 20px 0 20px 0;
+}
+
+blockquote p strong {
+    color: #8841ab;
 }
 
 /* Ajustes especiales para Celulares */

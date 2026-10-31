@@ -18,5 +18,6 @@
   * Técnicas de descomposición de problemas
     * [Descomposición del problema](./contenido/m2_descomposicionproblemas.md)
     * [Técnicas de descomposión de problemas](./contenido/m2_tecnicasdescomposicion.md)
+    * [Actividad: Descomposición del problema](./contenido/m2_actividaddescomposicionproblema.md)
 - Extra
   * [Guía de marcado](./contenido/marcado.md)
